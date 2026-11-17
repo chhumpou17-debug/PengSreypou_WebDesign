@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background-color: #dce0eb;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 180px 1fr 300px;
+        min-height: 100vh;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    
+    .leftside {
+        background-color: white;
+        padding: 20px;
+    }
+
+    
+    .middle {
+        display: grid;
+        grid-template-rows: 70px 120px 1fr 80px;
+        gap: 10px;
+    }
+     .head {
+        background-color: #f9e8ed;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 100px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .head b {
+        color: #ff647b !important;
+        font-size: 15px;
+    }
+
+    .head p {
+        font-size: 11px;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    .head .welcome {
+        flex: 1;
+    }
+
+    .head .illustration {
+        width: 150px;
+        text-align: center;
+        font-size: 65px;
+    }
+
+    .head .illustration p {
+        font-size: 25px;
+        margin: 0;
+    }
+    .body {
+        background-color: #dce0eb;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:10px;
+    }
+    .box{
+        background-color: aqua;
+        border-radius: 15px;
+        padding: 20px;
+    }
+    .card{
+        border-radius: 15px;
+        padding: 10px;
+        
+
+    }
+    .footer {
+        background-color: #dce0eb;
+        display: grid;
+        grid-template-columns:repeat(3,1fr) ;
+        gap:10px;
+        
+    }
+    .item{
+        border-radius: 15px;
+        display: flex;
+
+    }
+    .item1{
+        background-color:blue;
+    }
+    .item2{
+        background-color:darkblue;
+    }
+    .item3{
+        background-color:lightpink;
+    }
+    
+
+    
+    .rightside {
+        background-color: white;
+        padding: 20px;
+    }
+    .B{
+        background-color:gainsboro;
+        width:30px;
+        height:30px;
+        margin: 15px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        font-size: small;
+        color:white;
+    }
+    .b1{
+        background-color: #001CDE;
+    }
+    .b2{
+        background-color: #000B6B;
+    }
+    .b3{
+        background-color: #FFA6B5;
+    }
+    .t{
+        color:white;
+        font-size: small;
+        line-height: 1.5;
+    }
+    .profile{
+        display: block;
+        margin: 20px;
+        text-align: center;
+        line-height: 0.2;
+        font-size: small;
+        
+
+    }
+    img{
+        border-radius: 50%;
+        display:block;
+        margin: auto;
+        width:100px;
+    }
+    .T{
+        color: black;
+        font-size: small;
+    }
+    .right{
+        display:flex;
+    }
+    .leftside {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-size: 12px;
+        color: #777d9b;
+    }
+    .logo {
+        color: #25315c;
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+    .menu {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .menu:hover {
+        background-color: #eef1ff;
+        border-radius: 8px;
+    }
+
+    .upgrade {
+        margin-top: auto;
+        background-color: #f4f5fc;
+        padding: 15px;
+        border-radius: 12px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    .upgrade button {
+        background-color: #5979f5;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100%;
+    }
+    .result {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+        padding: 20px ;
+        color: #777d9b;
+    }
+    .bar {
+        width: 55px;
+        height: 4px;
+        background-color: #e0e3ee;
+        border-radius: 5px;
+    }
+
+    .progress {
+        height: 4px;
+        background-color: #5979f5;
+        border-radius: 5px;
+        
+    }
+    .chart {
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+        height: 120px;
+        margin-top: 20px;
+        
+    }
+
+    .day {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        gap: 5px;
+        font-size: 10px;
+        color: #999;
+    }
+
+    .line {
+        width: 3px;
+        height: 80px;
+        background-color: #d9dcf0;
+        position: relative;
+        
+    }
+
+    .line span {
+        display: block;
+        background-color: #536af5;
+        width: 3px;
+        height: 60%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftside">
+            <div class="logo">
+                <b>🔷 Linglee</b>
+            </div>
+
+            <div class="menu">▣ &nbsp; Dashboard</div>
+            <div class="menu">▱ &nbsp; Classes</div>
+            <div class="menu">▤ &nbsp; Resources</div>
+            <div class="menu">▦ &nbsp; Learning plan</div>
+            <div class="menu">🗪 &nbsp; Chat</div>
+            <div class="menu">⚙ &nbsp; Settings</div>
+
+            <div class="upgrade">
+                <h2>📚</h2>
+                <p>Upgrade to <b>PRO</b> for more resources.</p>
+                <button>Upgrade</button>
+            </div>
+            
+        </div>
+
+        <div class="middle">
+            <b style="margin: 30px;">Dashboard</b>
+            <div class="card head">
+                <div class="welcome">
+                    <b style="margin-left: 30px;">Welcome back Chhumpou!</b>
+                    <p style="margin-left: 30px;">You've learned 90% of your goal this week!<br>Keep it up and improve your results!</p>
+                </div>
+            </div>
+
+            <div class="card body">
+                <div class="box box1">
+                    <h4>Latest results</h4>
+
+                    <div class="result">
+                        <span>Unit 15 - Technology</span>
+                        <div class="bar"><div class="progress" style="width:25%; background:#ff7888;"></div></div>
+                        25%
+                    </div>
+
+                    <div class="result">
+                        <span>Unit 12 - Ecology</span>
+                        <div class="bar"><div class="progress" style="width:44%;"></div></div>
+                        44%
+                    </div>
+
+                    <div class="result">
+                        <span>Unit 9 - Real estate</span>
+                        <div class="bar"><div class="progress" style="width:40%;"></div></div>
+                        40%
+                    </div>
+
+                    <div class="result">
+                        <span>Unit 8 - Education</span>
+                        <div class="bar"><div class="progress" style="width:15%; background:#ff7888;"></div></div>
+                        15%
+                    </div>
+
+                    <div class="result">
+                        <span>Unit 16 - Job market</span>
+                        <div class="bar"><div class="progress" style="width:76%;"></div></div>
+                        76%
+                    </div>
+
+                </div>
+                <div class="box box2">
+                    <h4>Time spent on learning</h4>
+                    <p style="padding: 25px;">Mon &nbsp;&nbsp; Tue &nbsp;&nbsp; Wed &nbsp;&nbsp; Thu &nbsp;&nbsp; Fri &nbsp;&nbsp; Sat &nbsp;&nbsp; Sun</p>
+
+                    <div class="chart">
+                        <div class="day">
+                            <div class="line"><span></span></div>
+                            Mon
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:90%;"></span></div>
+                            Tue
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:70%;"></span></div>
+                            Wed
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:80%;"></span></div>
+                            Thu
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:100%;"></span></div>
+                            Fri
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:60%;"></span></div>
+                            Sat
+                        </div>
+
+                        <div class="day">
+                            <div class="line"><span style="height:85%;"></span></div>
+                            Sun
+                        </div>
+                    </div>
+
+                    <p>🔴 Vocabulary &nbsp; 🔵 Grammar &nbsp; 🟣 Listening</p>
+
+                </div>
+
+            </div>
+            <div class="card footer">
+                <div class="item item1">
+                    <div class="B b1">
+                        B2
+                    </div>
+                    <div class="t">
+                        <p><b>Business English</b><br>Grammar</p>
+                    </div>
+
+                </div>
+                <div class="item item2">
+                    <div class="B b2">
+                        B2
+                    </div>
+                    <div class="t">
+                        <p><b>Common English</b><br>Phrasal</p>
+                    </div>
+
+                </div>
+                <div class="item item3">
+                    <div class="B b3">
+                        C1
+                    </div>
+                    <div class=" t">
+                        <p><b>Business English</b><br>Vocabilary</p>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="rightside">
+            <div class="profile">
+                <img src="https://i.pinimg.com/236x/3b/76/4e/3b764e011f795dab643ad66372faed14.jpg" alt="profile">
+                <h4>Chumpou<h4>
+                <p>student</p>
+            </div>
+            <div class="right">
+                <div class="B">
+                    B2
+                </div>
+                <div class="T t">
+                    <p><b>English</b><br>high intermediate</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="B">
+                    C1
+                </div>
+                <div class="T t">
+                    <p><b>Chiness</b><br>Beginner</p>
+                </div>
+            </div>
+
+            
+            <b>Reminders</b>
+            <div class="right">
+                <div class="B"></div>
+                <div class="T t">
+                    <p><b>Eng-Vocabulary test</b><br>10 Sep 2026 Fri</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="B"></div>
+                <div class="T t">
+                    <p><b>Eng-Send grammar homework</b><br>14 Sep 2026 Wed</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="B"></div>
+                <div class="T t">
+                    <p><b>Chiness-Send easy</b><br>05 Dec 2026 Mon </p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+</html>
